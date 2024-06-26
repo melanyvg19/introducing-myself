@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.titulo {
+    width: 100%;
+    background-color: #F8F9FA;
+}
+
+.titulo img {
+    width: 15%;
+    margin-left: 20px;
+}
+
+.contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+    }
+
+.cliente{
+    margin: 50px 30px;
+}
+
+.seleccionar-cliente {
+    width: 250px; 
+    padding: 10px; 
+    font-size: 16px; 
+    text-align: center;
+    border: 2px solid #A6A6A6; 
+    border-radius: 5px; 
+    background-color: white; 
+    color: #A6A6A6; 
+    cursor: pointer; 
+}
+
+.fecha-clientes{
+    justify-content: center;
+}
+
+#fecha {
+    width: 250px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px; 
+    border: 2px solid #A6A6A6;
+    color: #A6A6A6;
+    text-align: center;
+   
+}
+
+.boton{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.boton button {
+    background: linear-gradient(#7CB05E, #8DC63F);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 10px;
+    width: 150px;
+    color: #FFFFFF;
+    font-weight: 700;
+    border: 1px solid #7CB05E;
+    border-radius: 15px;
+    transition: 0.5s ease-in-out;
+    /* margin-top: 50px; */
+}
+
+.boton button:hover{
+    background: transparent;
+    border: 1px solid #7CB05E;
+    color: #8DC63F;
+    transition: 0.5s ease;
+}
+
+.btn-back button {
+    position: fixed;
+    bottom: 40px;
+    left: 20px; /* Ajusta según necesites */
+    color: #7CB05E; /* Color del texto */
+    border: none;
+    background: none;
+    padding: 15px; /* Ajusta el tamaño del botón */
+    font-size: 35px; /* Tamaño del icono */
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-back button:hover {
+    font-size: 40px;
+    transition: 0.2s ease;
+}
+
+
+/* Media queries */
+@media (max-width: 1440px) {
+    .contenedor {
+        margin: 20px 50px;
+    }
+
+    .titulo img {
+        width: 20%;
+    }
+
+    .card {
+        flex: 1 1 30%;
+    }
+}
+
+@media (max-width: 1366px) {
+    .contenedor {
+        margin: 20px 30px;
+    }
+
+    .titulo img {
+        /* width: 25%; */
+    }
+
+    .card {
+        flex: 1 1 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .titulo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .titulo img {
+        width: 50%;
+        margin: 10px 0;
+    }
+
+    .contenedor {
+        margin: 20px 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 60%;
+        flex: 1 1 80%;
+        margin: 10px 0;
+    }
+
+    .btn-back {
+        position: fixed; /* Fijo en la pantalla */
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 375px) {
+    .titulo img {
+        width: 70%;
+    }
+
+    .card-body i {
+        font-size: 40px;
+    }
+
+    .card {
+        width: 60%;
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .btn-back {
+        position: fixed; /* Fijo en la pantalla */
+        bottom: 10px;
+        right: 10px;
+    }
+}

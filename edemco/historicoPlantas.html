@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Historico por plantas</title>
+    <link rel="stylesheet" href="css/historicoPlantas.css">
+    <link rel="icon" type="image/x-icon" href="assets/ico-logo.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/historicoPlantas.js"></script>
+</head>
+<body>
+    <header class="titulo">
+        <img src="assets/Logo-removebg-preview.png" alt="logo-edemco">
+    </header>
+    <div class="contenedor">
+            <div class="cliente">
+                <select name="cliente" id="seleccionar-cliente" class="seleccionar-cliente">
+                    <option disabled selected value=""><b>SELECCIONE UN CLIENTE</b></option>
+                </select>
+            </div>
+            <div id="fecha-clientes" class="fecha-clientes" >
+                <input type="date"  id="fecha" placeholder="AAAA">
+            </div>
+    </div>    
+    <div class="boton">
+        <button id="btnBuscar"><b>Buscar</b></button> 
+    </div>
+    <!-- <table id="tablaCliente" class="tablaCliente">
+        <thead>
+            <th scope="col">Mes</th>
+            <th scope="col">Generación</th>
+            <th scope="col">Generación acumulada</th>
+            <th scope="col">Valor KWh</th>
+            <th scope="col">Valor total</th>
+            <th scope="col">Tarifa OR</th>
+            <th scope="col">Tarifa edemco</th>
+            <th scope="col">Diferencia tarifa</th>
+            <th scope="col">Ahorro actual</th>
+            <th scope="col">Ahorro acumulado</th>
+            <th scope="col">Ahorro CO2</th>
+            <th scope="col">Acumulado CO2</th>
+        </thead>
+        <tbody>
+        </tbody>
+    </table> -->
+    <div class="btn-back">
+        <button onclick="goBack()"><i class="fa-solid fa-angle-left"></i></button>
+    </div>
+</body>
+</html>

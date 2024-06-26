@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Principal</title>
+    <link rel="icon" type="image/x-icon" href="assets/ico-logo.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/principal.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header class="titulo">
+        <img src="assets/Logo-removebg-preview.png" title="logo-edemco">
+        <div class="btn-back">
+            <button onclick="goBack()"><i class="fa-solid fa-right-from-bracket" title="Cerrar Sesión"></i></button>
+        </div>
+    </header>
+    <main>
+        <section class="container">
+            <div class="card text-center">
+                <div class="card-header">Iniciar facturación</div>
+                <div class="card-body">
+                    <i class="fa-solid fa-receipt"></i>
+                </div>
+                <div class="card-footer">
+                    <button class="btn" id="btn-iniciar" type="submit">Iniciar factura</button>
+                </div>
+            </div>
+
+            <div class="card text-center">
+                <div class="card-header">Editar diseños</div>
+                <div class="card-body">
+                    <i class="fa-solid fa-file-pen"></i>
+                </div>
+                <div class="card-footer">
+                    <button class="btn" id="btn-editar" type="submit">Editar diseños</button>
+                </div>
+            </div>
+
+            <div class="card text-center">
+                <div class="card-header">Cargue de archivos</div>
+                <div class="card-body">
+                    <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                </div>
+                <div class="card-footer">
+                    <button class="btn" id="btn-carga-archivos" type="submit">Cargue de archivos</button>
+                </div>
+            </div>
+            
+            <div class="card text-center">
+                <div class="card-header">Histórico de facturas</div>
+                <div class="card-body">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="card-footer">
+                    <button class="btn" id="btn-historico-facturas" type="submit">Historico de facturas</button>
+                </div>
+            </div>
+            <div class="card text-center">
+                <div class="card-header">Visualización de archivos</div>
+                <div class="card-body">
+                    <i class="fa-regular fa-eye"></i>
+                </div>
+                <div class="card-footer">
+                    <button class="btn" id="btn-visualizacion" type="submit">Visualización</button>
+                </div>
+            </div>
+            <div class="card text-center">
+                <div class="card-header">Facturación especial</div>
+                <div class="card-body">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                </div>
+                <div class="card-footer">
+                    <button class="btn" id="btn-factura-especial" type="submit">Facturación especial</button>
+                </div>
+            </div>
+
+            <div class="card text-center">
+                <div class="card-header">Histórico por planta</div>
+                <div class="card-body">
+                    <i class="fa-solid fa-note-sticky"></i>
+                </div>
+                <div class="card-footer">
+                    <button class="btn" id="btn-historico-plantas" type="submit">Histórico por planta</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        const btnIniciar = document.getElementById('btn-iniciar');
+        const btnEditar = document.getElementById('btn-editar');
+        const btnHistoricoFacturas = document.getElementById('btn-historico-facturas');
+        const btnHistoricoPlantas = document.getElementById('btn-historico-plantas');
+        const btnCargaArchivos = document.getElementById('btn-carga-archivos');
+        const btnVisualizacion = document.getElementById('btn-visualizacion');
+        const btnFacturaEspecial = document.getElementById('btn-factura-especial');
+
+        btnIniciar.addEventListener('click', function () {
+            window.location.href = "iniciarFacturas.html";
+        });
+        btnEditar.addEventListener('click', function () {
+            window.location.href = 'editarDiseño.html';
+        });
+        btnHistoricoFacturas.addEventListener('click', function () {
+            window.location.href = 'historicoFacturas.html';
+        });
+        btnHistoricoPlantas.addEventListener('click', function () {
+            window.location.href = 'historicoPlantas.html';
+        });
+        btnCargaArchivos.addEventListener('click', function () {
+            window.location.href = 'cargarArchivos.html';
+        });
+        btnVisualizacion.addEventListener('click', function () {
+            window.location.href = 'visualizacion.html';
+        });
+        btnFacturaEspecial.addEventListener('click', function () {
+            window.location.href = 'facturacionEspecial.html';
+        });
+
+        function goBack() {
+            window.history.back();
+        }
+
+    </script>
+</body>
+
+</html>

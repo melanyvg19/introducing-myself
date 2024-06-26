@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Historico de facturas</title>
+    <link rel="stylesheet" href="css/historicoFacturas.css">
+    <link rel="icon" type="image/x-icon" href="assets/ico-logo.ico">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/historicoFacturas.js"></script>
+</head>
+<body>
+    <header class="titulo">
+        <img src="assets/Logo-removebg-preview.png" alt="logo-edemco">
+    </header>
+    <div class="contenedor">
+            <div class="cliente">
+                <select name="cliente" id="seleccionar-cliente" class="seleccionar-cliente">
+                    <option disabled selected value=""><b>SELECCIONE UN CLIENTE</b></option>
+                </select>
+            </div>
+            <div id="fecha-clientes" class="fecha-clientes">
+                <input type="date"  id="fecha" placeholder="AAAA">
+            </div>
+    </div>
+    <div class="botonBuscar">
+        <button id="btnBuscar"><b>Buscar</b></button> 
+    </div>
+    <!-- <table class="tabla mt-5" id="tablaCliente" style="display: none">
+        <thead>
+            <tr>
+                <th scope="col">Cliente</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">PDF</th>
+            </tr>
+        </thead>
+        <tbody>
+            Los datos se cargarán dinámicamente aquí 
+        </tbody>
+    </table> -->
+    <div class="btn-back">
+        <button onclick="goBack()"><i class="fa-solid fa-angle-left"></i></button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.titulo {
+    width: 100%;
+    background-color: #F8F9FA;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.titulo img {
+    width: 15%;
+    margin-left: 20px;
+}
+
+.btnSubir {
+    background: linear-gradient(#7CB05E,#8DC63F);
+    cursor: pointer;
+    height: 30px;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-top: 20px;
+    transition: 0.5s ease-in-out;
+}
+
+.btnSubir:hover{
+    background: transparent;
+    border: 1px solid #7CB05E;
+    color: #8DC63F;
+    transition: 0.5s ease;
+}
+
+.btn-back button{
+    position: fixed;
+    bottom: 40px;
+    left: 20px;
+    color: #7CB05E;
+    border: none;
+    background: none;
+    padding: 15px; 
+    font-size: 35px; 
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-back button:hover{
+    font-size: 40px;
+    transition: 0.2s ease;
+}
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.subir-archivos{
+    border: 3px dashed #E9ECEF;
+    color: #D9D9D9;
+    height: 230px;
+    width: 300px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.subir-archivos p{
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.indicador{
+    margin-bottom: 20px;
+    text-align: center;
+    color: #A6A6A6;
+    padding: 15px;
+}
+
+.subir-archivos.active{
+    background-color: #D9D9D9;
+    color: #A6A6A6;
+    border: 2px dashed #D9D9D9;
+}
+
+#vista-previa {
+    background-color: #f5f5f5;
+    border: 2px dashed #007bff;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #007bff;
+    margin-top: 10px; 
+    margin-left: 655px;
+    width: 600px;
+    height: 50px;
+    display: none;
+    overflow: auto
+}
+
+.btnAutomatizar {
+    background: linear-gradient(#7CB05E,#8DC63F);
+    cursor: pointer;
+    height: 30px;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 25PX;
+    font-size: 14px;
+    color: #FFFFFF;
+    transition: 0.5s ease-in-out;
+}
+
+.btnAutomatizar:hover{
+    background: transparent;
+    border: 1px solid #7CB05E;
+    color: #8DC63F;
+    transition: 0.5s ease;
+}
+
+
+@media (max-width: 1440px) {
+
+    .titulo img {
+        width: 20%;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+    .titulo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .titulo img {
+        width: 50%;
+        margin: 10px 0;
+    }
+
+    .btn-back {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 375px) {
+    .titulo img {
+        width: 70%;
+    }
+
+
+    .btn-back {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+    }
+}

@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.titulo {
+    width: 100%;
+    background-color: #F8F9FA;
+}
+
+.titulo img {
+    width: 25%;
+    margin-left: 20px;
+}
+
+body {
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/banner-energia-renovable-vf.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.titulo {
+    text-align: center;
+    background-color: transparent;
+    color: white;
+}
+
+.login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+i{
+    font-size: 20px;
+}
+
+.text-center{
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    margin-right: 10px;
+  }
+  
+  .input-group input {
+    border: 2px solid #7CB05E;
+    border-radius: 20px;
+    padding: 10px;
+    transition: border-color 1s ease;
+    background:#ffffff75;
+  }
+  
+  .input-group input:focus {
+    border-color: #7CB05E;
+  }
+
+
+.sesion {
+    /* background-color: rgba(255, 255, 255, 0.0); */
+    /* border: 3px solid #8DC63F; */
+    /* border-radius: 20px; */
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 200px;
+    padding: 30px;
+    
+}
+
+
+.btnContainer{
+    text-align:center;
+}
+
+.btn {
+    background: linear-gradient(#7CB05E, #8DC63F);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 10px;
+    color: #FFFFFF;
+    font-weight: 900;
+    border: 2px solid #7CB05E;
+    border-radius: 15px;
+    transition: 0.5s ease-in-out;
+    width: 50%;
+    font-size: 18px;
+}
+
+.btn:hover {
+    background:#ffffff75;
+    border: 2px solid #7CB05E;
+    color: #7CB05E;
+    transition: 0.5s ease;
+}
+
+/* Media queries */
+@media (max-width: 1440px) {
+
+    .titulo img {
+        width: 20%;
+    }
+
+    .sesion {
+        margin:  0 auto;
+    }
+
+    .btnContainer button {
+        font-size: 12px;
+        padding: 8px;
+        width: 60%;
+    }
+}
+
+@media (max-width: 1366px) {
+    /* .titulo img {
+        width: 25%;
+    } */
+
+    .sesion {
+        margin:  0 auto;
+    }
+
+    .btnContainer button {
+        font-size: 12px;
+        padding: 8px;
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .titulo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .titulo img {
+        width: 50%;
+        margin: 10px 0;
+    }
+
+
+    .sesion {
+        margin: 0 auto;
+    }
+
+    .btnContainer button {
+        font-size: 12px;
+        padding: 8px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    .titulo img {
+        width: 70%;
+    }
+}

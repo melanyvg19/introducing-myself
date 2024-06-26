@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="assets/ico-logo.ico">
+    <title>Cargar archivos</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/cargarArchivos.css" />
+  </head>
+
+  <body>
+    <header class="titulo">
+      <img src="assets/Logo-removebg-preview.png" alt="logo-edemco" />
+    </header>
+    <div class="btn-back">
+      <button onclick="goBack()"><font-size: 40px;
+        transition: 0.2s ease;i class="fa-solid fa-angle-left"></i></button>
+    </div>
+
+    <p class="indicador">
+      Ingrese aquí los archivos enviados por contabilidad para <br />
+      continuar con el proceso de facturación
+    </p>
+
+    <div class="flex-container">
+      <div class="subir-archivos">
+        <p>haga clic para seleccionar sus archivos</p>
+        <i class="fa-solid fa-cloud-arrow-up" style="font-size: 80px"></i>
+        <input
+          type="file"
+          name="fileToUpload"
+          id="fileToUpload"
+          style="display: none"
+        />
+        <button class="btnSubir" id="subir-button" type="button">
+          <b>SUBIR</b>
+        </button>
+      </div>
+    </div>
+
+    <div id="vista-previa">
+      <p id="vista-previa-text"></p>
+    </div>
+
+    <div class="flex-container">
+      <button class="btnAutomatizar" id="automatizar-button" type="button">
+        <b>INICIAR</b>
+      </button>
+    </div>
+
+    <script src="js/cargarArchivo.js"></script>
+  </body>
+</html>

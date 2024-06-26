@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Editar diseño</title>
+    <link rel="icon" type="image/x-icon" href="assets/ico-logo.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/editarDiseño.css" />
+</head>
+
+<body>
+    <header class="titulo">
+        <img src="assets/Logo-removebg-preview.png" alt="logo-edemco" />
+    </header>
+    <div class="selector">
+        <select name="cliente" id="seleccionar-cliente" class="seleccionar-cliente">
+            <option disabled selected value=""><b>SELECCIONE UN CLIENTE</b></option>
+        </select>
+        <button class="btnBuscar" id="buscar-button"><b>Buscar</b></button>
+    </div>
+
+    <div class="btn-back">
+        <button onclick="goBack()"><i class="fa-solid fa-angle-left"></i></button>
+    </div>
+    <section class="flex-container">
+        <div class="card" id="generacion-card">
+            <div class="card-header">Generación</div>
+            <div class="card-body">
+                <p class="card-title" id="generacion-value"></p>
+            </div>
+            <div class="card-footer">
+                <button class="btnEditar" id="btn-editar" type="submit">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="card" id="generacionAcum-card">
+            <div class="card-header">Generación acumulada</div>
+            <div class="card-body">
+                <p class="card-title" id="generacionAcum-value"></p>
+            </div>
+            <div class="card-footer">
+                <button class="btnEditar" id="btn-editar" type="submit">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="card" id="valor-card">
+            <div class="card-header">Valor KWh</div>
+            <div class="card-body">
+                <p class="card-title" id="valor-value"></p>
+            </div>
+            <div class="card-footer">
+                <button class="btnEditar" id="btn-editar" type="submit">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="card" id="valorTotal-card">
+            <div class="card-header">Valor total</div>
+            <div class="card-body">
+                <p class="card-title" id="valorTotal-value"></p>
+            </div>
+            <div class="card-footer">
+                <button class="btnEditar" id="btn-editar" type="submit">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="card" id="ahorro-card">
+            <div class="card-header">Ahorro actual</div>
+            <div class="card-body">
+                <p class="card-title" id="ahorro-value"></p>
+            </div>
+            <div class="card-footer">
+                <button class="btnEditar" id="btn-editar" type="submit">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="card" id="ahorroAcum-card">
+            <div class="card-header">Ahorro acumulado</div>
+            <div class="card-body">
+                <p class="card-title" id="ahorroAcum-value"></p>
+            </div>
+            <div class="card-footer">
+                <button class="btnEditar" id="btn-editar" type="submit">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="card" id="ahorroCO2-card">
+            <div class="card-header">Ahorro CO2</div>
+            <div class="card-body">
+                <p class="card-title" id="ahorroCO2-value"></p>
+            </div>
+            <div class="card-footer">
+                <button class="btnEditar" id="btn-editar" type="submit">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+            </div>
+        </div>
+        <div class="card" id="acumuladoCO2-card">
+            <div class="card-header">Acumulado CO2</div>
+            <div class="card-body">
+                <p class="card-title" id="acumuladoCO2-value"></p>
+            </div>
+            <div class="card-footer">
+                <button class="btnEditar" id="btn-editar" type="submit">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="card" id="codigoCufe-card">
+            <div class="card-header">Código cufe</div>
+            <div class="card-body">
+                <p class="card-title" id="codigoCufe-value"></p>
+            </div>
+            <div class="card-footer">
+                <button class="btnEditar" id="btn-editar" type="submit">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="card" id="fechaVen-card">
+            <div class="card-header">Fecha vencimiento</div>
+            <div class="card-body">
+                <p class="card-title" id="fechaVen-value"></p>
+            </div>
+            <div class="card-footer">
+                <button class="btnEditar" id="btn-editar" type="submit">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="card" id="fechaDIAN-card">
+            <div class="card-header">Fecha aceptación DIAN</div>
+            <div class="card-body">
+                <p class="card-title" id="fechaDIAN-value"></p>
+            </div>
+            <div class="card-footer">
+                <button class="btnEditar" id="btn-editar" type="submit">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="card" id="Nfactura-card">
+            <div class="card-header">Factura N°</div>
+            <div class="card-body">
+                <p class="card-title" id="Nfactura-value"></p>
+            </div>
+            <div class="card-footer">
+                <button class="btnEditar" id="btn-editar" type="submit">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    <script src="js/editarDiseño.js"></script>
+</body>
+
+</html>
